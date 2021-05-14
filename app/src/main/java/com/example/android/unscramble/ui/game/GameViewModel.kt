@@ -37,7 +37,7 @@ class GameViewModel : ViewModel() {
             while (scrambledWord.toString().equals(currentWord, false)) {
                 scrambledWord.shuffle()
             }
-            _currentScrambledWord = String(scrambledWord)
+            _currentScrambledWord.value = String(scrambledWord)
             ++_currentWordCount
             usedWordsList.add(currentWord)
         }
