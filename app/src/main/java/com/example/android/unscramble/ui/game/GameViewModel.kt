@@ -6,10 +6,10 @@ import androidx.lifecycle.ViewModel
 
 class GameViewModel : ViewModel() {
     private val _score = MutableLiveData(0)
-    val score: Int get() = _score
+    val score : LiveData<Int>  get() = _score
 
-    private var _currentWordCount  = 0
-    val currentWordCount: Int get() = _currentWordCount
+    private val _currentWordCount  = MutableLiveData(0)
+    val currentWordCount: LiveData<Int> get() = _currentWordCount
 
     private val _currentScrambledWord = MutableLiveData<String>()
     val currentScrambleWord: LiveData<String> get() = _currentScrambledWord
