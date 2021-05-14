@@ -72,8 +72,8 @@ class GameViewModel : ViewModel() {
      * Re-initializes the game data to restart the game.
      */
     fun reinitializeData(){
-        _score = 0
-        _currentWordCount = 0
+        _score.value = 0
+        _currentWordCount.value = 0
         usedWordsList.clear()
         getNextWord()
     }
