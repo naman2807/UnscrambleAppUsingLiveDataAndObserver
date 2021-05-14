@@ -38,13 +38,13 @@ class GameViewModel : ViewModel() {
                 scrambledWord.shuffle()
             }
             _currentScrambledWord.value = String(scrambledWord)
-            ++_currentWordCount
+            ++_currentWordCount.value
             usedWordsList.add(currentWord)
         }
     }
 
     private fun increaseScore(){
-        _score += SCORE_INCREASE
+        _score.value += SCORE_INCREASE
     }
 
     fun isUserWordCorrect(playerWord : String) : Boolean{
